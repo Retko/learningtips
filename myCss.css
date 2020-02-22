@@ -1,0 +1,282 @@
+/* reset margins */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ol, ul, li,
+blockquote, pre, form, label, legend, table, caption, tbody, tfoot, thead,
+tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, section, summary, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* setup body */
+body {
+    line-height: 1.1; /*odstup mezi radky*/
+    font-family: Georgia, serif;
+    font-size: 14pt;
+    background: linear-gradient( #bebfbf, #eeeeee );    
+}
+
+p {
+    text-align:justify;
+    padding: 0px 15px;
+    font-size: 90%;
+}
+
+
+.separateParagraphs p{
+    padding: 10px 15px;
+}
+
+/* reasonable starting margins */
+p, h1, h2, h3, h4, h5, h6, ol, ul, li { margin: 5pt; }
+li { margin-left: 2em; }
+
+/* setup headings */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+h1 { font-size: 200%; }
+h2 { font-size: 180%; }
+h3 { font-size: 160%; }
+h4 { font-size: 140%; }
+h5 { font-size: 120%; }
+h6 { font-size: 100%; }
+
+a {
+    color: black;
+}
+
+/*-------------------------------------------------------------*/
+
+
+/* Container setting for the page. 
+Auto margin keeps the page centered in the browser when the browser 
+size is adjusted. */
+#container {
+
+    border: 1px solid black;
+    width: 900px;
+    height: auto;
+    margin: auto; /*keeps page centered*/
+    background-color:#F6F6F6;
+    -moz-box-shadow: 15px 7px 40px 4px #737575;
+    -webkit-box-shadow: 15px 7px 40px 4px #737575;
+    -o-box-shadow: 15px 7px 40px 4px #737575;
+    box-shadow: 15px 7px 40px 4px #737575; /*shadow*/
+}
+
+#header { 
+    box-shadow: 5px 7px 5px 4px #737575; /*shadow*/
+    position: relative; /* pozicovany podle containeru*/
+    width: 900px;
+    height: 200px;
+    background-image: url('images/header.png');
+}
+
+#menubar {
+    height: 50px;
+    width: 900px;
+    margin: auto;
+}
+
+#mainbody {
+    padding: 0px;
+    width: 594px;
+    height: auto; 
+    margin: auto;    
+    border-top: 0px;
+}
+
+#mainbody h1 {
+    padding: 15px 20px;
+}
+
+#mainbody h6 {
+    padding: 15px 40px;
+}
+
+/*------------------------------------------------------------
+MENULINKS */
+.menulink {    
+    text-align: center;
+    height: 60px;
+    background: linear-gradient( #bebfbf, #eeeeee );
+    background-color: grey;
+}
+
+.menulink ul {
+    padding: 10px;
+    margin: auto; /*outside*/
+    margin-top: 10px;      
+}
+
+.menulink ul li {
+    padding: 10px 10px 5px 10px; /*inside the window*/
+    margin: 0px 20px 0px 0px; /*20 pixels between individual words*/
+    list-style-type: none; /*turn bullets off*/
+    display: inline; /*budou vedle sebe*/
+    background-color: #ebebeb;
+    border: 1px solid white;
+    border-radius: 8px;
+
+    box-shadow: 2px 2px 2px #555, inset 0 25px 20px -10px rgba(255, 255, 255, 0.3),
+        inset 0 -15px 20px -10px rgba(0, 0, 0, 0.15);
+
+    transition: background-color .5s ease;
+}
+
+.menulink ul li a {
+    text-decoration: none; /* bez podtrhavani*/
+    font-size: 26px;
+    padding: 5px; /*all the way around*/
+    width: 120px;
+}
+
+.menulink li:hover {
+
+    background: linear-gradient(-45deg, #afafaf, #e4e5e5);
+
+
+}
+/* ---------------------------------------------------------------------*/
+
+#lmargin{ 
+    float: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: auto;
+    width: 140px;
+
+
+}
+
+#rmargin { 
+    float: right;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: auto;
+    width: 140px;
+}
+
+/*---------------------------------------------------------------------
+left menu */
+.lvmenu {
+    text-align: left;
+    float: left;
+    height: auto;
+    width: 152px;
+    margin: -30px 3px;
+
+}
+
+.lvmenu ul {
+    list-style-type: none;
+    margin: auto;
+}
+.lvmenu ul li {
+    position:relative;
+}
+
+
+.lvmenu li {
+    padding: 5px;
+    margin: auto;
+    background-color: #ebebeb;
+    border: 1px solid white;
+    margin-top: 1px;    
+    border-radius: 8px;
+}
+
+.lvmenu a {
+    text-decoration: none;
+    display:block; /*budu moct klikat na cely button, nejen na text*/
+}
+
+.lvmenu li:hover {
+    background-color: #afafaf;
+    transition: background 1s linear 0s, color 1s linear 0s;
+    box-shadow: 2px 2px 2px 2px #737575;
+}
+
+/*Within our parent UL, set the position of any child UL to absolute. 
+Set the display property to 'none'. This hides the drop-down menu, 
+which can be brought back into sight when its parent list item is hovered.*/
+.lvmenu ul ul{
+    position:absolute;
+    display:none;
+}
+
+.lvmenu ul li:hover ul{
+    width:100%;
+    position:absolute;
+    display:block; 
+    left:151px;
+    top:-2px; 
+     
+}
+
+/* vysouvaci menu*/
+.lvmenu li ul li{
+    background-color: #d2d3d3;
+
+}
+
+.lvmenu li:hover{
+    
+    opacity: 1;
+    transition: background 1s linear 0s, color 1s linear 0s;
+    /*transition: all 1s ease-out;*/
+
+}
+/*----------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------
+FOOTER*/
+footer {
+    clear: both; /* bez toho by to bylo pod mainbody; takle to zabere celou sirku containeru*/
+    height: 50px;
+    background: linear-gradient(   #F6F6F6, #c4c5c5); 
+    position: relative;
+    width: 100%;
+    bottom: 0;    
+}
+
+footer div {
+    float: right;
+    padding: 20px 10px;
+}
+/*---------------------------------------------*/
+
+
+
+/*--------------------------------------------------
+MAINBODY*/
+.intext {
+    padding-left: 50px;
+}
+
+.tucne {
+    font-weight: 700;
+    font-size: 90%;
+}
+
+.uvod {
+    font-style: italic;
+    padding-top: 15px;
+}
+
+#rozestupy p, h5 {
+    padding-top: 15px;
+}
+h5 {
+    padding: 25px 15px 0px;   
+}
+/*------------------------------------------------------*/
