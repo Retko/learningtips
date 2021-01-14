@@ -1,3 +1,3 @@
 # learningtips
 
-https://retko.github.io/learningtips/ 
+https://michaelmiscanuk.github.io/learningtips/
